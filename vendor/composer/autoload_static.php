@@ -15,7 +15,7 @@ class ComposerStaticInit971b5e6116b27919d64e874daadd79b3
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
-        '719971e375036615a0685b6fb054583d' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php',
+        '15d4e7a7bf233663eac6d9be22bf6f65' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -67,6 +67,7 @@ class ComposerStaticInit971b5e6116b27919d64e874daadd79b3
         array (
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
@@ -74,10 +75,6 @@ class ComposerStaticInit971b5e6116b27919d64e874daadd79b3
         'C' => 
         array (
             'Composer\\CaBundle\\' => 18,
-        ),
-        'A' => 
-        array (
-            'AppBundle\\' => 10,
         ),
     );
 
@@ -194,6 +191,10 @@ class ComposerStaticInit971b5e6116b27919d64e874daadd79b3
         array (
             0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
         ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
         'Doctrine\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
@@ -210,10 +211,10 @@ class ComposerStaticInit971b5e6116b27919d64e874daadd79b3
         array (
             0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
         ),
-        'AppBundle\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/AppBundle',
-        ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -253,10 +254,6 @@ class ComposerStaticInit971b5e6116b27919d64e874daadd79b3
             array (
                 0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
-            'Doctrine\\Common\\Annotations\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/annotations/lib',
-            ),
         ),
     );
 
@@ -281,6 +278,7 @@ class ComposerStaticInit971b5e6116b27919d64e874daadd79b3
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit971b5e6116b27919d64e874daadd79b3::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit971b5e6116b27919d64e874daadd79b3::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit971b5e6116b27919d64e874daadd79b3::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit971b5e6116b27919d64e874daadd79b3::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit971b5e6116b27919d64e874daadd79b3::$classMap;
 
