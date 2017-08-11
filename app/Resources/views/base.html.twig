@@ -3,11 +3,45 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+
+            <link href="http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300" rel="stylesheet" type="text/css">
+            <link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
+            <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,500,300" rel="stylesheet" type="text/css">
+
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/theme-2.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/theme-animate-2.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/theme-elements-2.css') }}">
+
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins.css') }}">
+
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/pink.css') }}">
+
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
+
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/skeleton.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/flexslider.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/prettyPhoto.css') }}">
+
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/theme-responsive.css') }}">
+	    <script src="{{ asset('js/modernizr.js') }}"></script>
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
     </head>
-    <body>
+    <body style="overflow: visible;">
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/plugins.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/respond.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/jquery.appear.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/jquery.prettyPhoto.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/jquery.flexslider.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/jquery.form-validator.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/jquery.form-validator.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/date.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/security.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
